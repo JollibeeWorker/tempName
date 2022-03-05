@@ -1,4 +1,7 @@
 import React, { useRef, useState } from 'react';
+import "./app.css";
+import "./fonts/ProximaNovaBoldItalic.ttf";
+import "./fonts/OpenSans-Light.ttf";
 
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
@@ -27,13 +30,16 @@ function App() {
     <div className="App">
       <header>
 
-
       </header>
       <section >
         {user ? <ChatRoom /> : <SignIn />}
       </section>
     </div>
   );
+}
+
+function top() {
+
 }
 
 function SignIn() {
@@ -62,6 +68,7 @@ function SignOut() {
 }
 
 function ChatRoom() {
+  const scrollDown = useRef();
   const messagesRef = firestore.collection('messages');
   const query = messagesRef.orderBy('createdAt').limit(25);
   const [messages] = useCollectionData(query, {idField: 'id'});
@@ -78,18 +85,26 @@ function ChatRoom() {
     });
 
     setFormValue('')
+
+    scrollDown.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
     <>
+    <body>
+      <header>
+        <h1>CAMPUSconnect</h1>
+      </header>
       <div>
 
         {messages && messages.map(msg => <ChatMessage key = {msg.id} message = {msg}/>)}
 
       </div>
-      <div>
+      <div ref = {scrollDown}>
 
+        
 
+        
 
       </div>
 
@@ -97,7 +112,7 @@ function ChatRoom() {
         <input value = {formValue} onChange = {(e) => setFormValue(e.target.value)}/>
         <button type = 'submit'>👌</button>
       </form>
-    
+      </body>
     </>
   )
 }
@@ -106,9 +121,12 @@ function ChatMessage(props) {
   const { text, uid, photoURL } = props.message;
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
   return (
+    <div class="bubble">
     <div className={`message ${messageClass}`}>
+      
       <img src = {photoURL} />
       <p>{text}</p>
+    </div>
     </div>
   )
 }

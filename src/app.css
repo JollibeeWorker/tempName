@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Proxima";
+    src: local("ProximaNovaBoldItalic"),
+    url("./fonts/ProximaNovaBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSans-Light"),
+    url("./fonts/OpenSans-Light.ttf") format("truetype");
+}
+
+header {
+    font-family: "Proxima";
+    text-align: center;
+    color: #89CFF0;
+    font-size: 200%;
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: #222222;
+    
+}
+
+body {
+    background-color: #222222;
+    margin: 0;
+}
+
+img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    float: left;
+    margin: -10px;
+}
+
+p {
+    color: white;
+    font-family: "OpenSans";
+    text-align: center;
+}
+
+.bubble {
+    border: 3px #2E2E2E solid;
+    padding: 20px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    display: block;
+}
