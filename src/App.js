@@ -92,19 +92,18 @@ function ChatRoom() {
   return (
     <>
     <body>
-      <header>
-        <h1>CAMPUSconnect</h1>
-      </header>
+    <header>CAMPUSconnect</header>
+      <div class="navbar">
+        
+        <a href="/app">Chatroom</a>
+        <a href="twitter.com">User Settings</a>
+      </div>
       <div>
 
         {messages && messages.map(msg => <ChatMessage key = {msg.id} message = {msg}/>)}
 
       </div>
       <div ref = {scrollDown}>
-
-        
-
-        
 
       </div>
 
@@ -121,13 +120,13 @@ function ChatMessage(props) {
   const { text, uid, photoURL } = props.message;
   const messageClass = uid === auth.currentUser.uid ? 'sent' : 'received';
   return (
-    <div class="bubble">
+    <div class="slide-up-fade-in">
     <div className={`message ${messageClass}`}>
-      
       <img src = {photoURL} />
-      <p>{text}</p>
+      <p class="bubble2">{text}</p>
     </div>
     </div>
+      
   )
 }
 
