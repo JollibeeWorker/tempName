@@ -33,6 +33,8 @@ class scrap:
         for mytag in profdifficult:
             #print(mytag.get_text())
             self.dif = mytag.get_text()
+
+        for mytag in 
     
     def getNam(self):
         return self.nam

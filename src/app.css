@@ -28,13 +28,88 @@ input {
     position: fixed;
     width: 200px;
     margin-left: auto;
-    left: 45%;
+    left: 44%;
     z-index: 1000000;
     bottom: 2%;
+    border-style: solid;
 }
 
 button {
-    
+    z-index: 1000;
+}
+
+.signin button {
+    background-color: #89CFF0;
+    color: black;
+    font-family: "OpenSans";
+    text-align: center;
+    border-radius: 50px;
+    font-size: 150%;
+    padding: 2px, 10px;
+    position: fixed;
+    width: 250px;
+    left: 19%;
+    margin-top: 85%;
+    z-index: 10;
+}
+
+.signin img {
+    width: 150px;
+    height: 150px;
+    left: 30%;
+    top: 23%;
+}
+
+.square {
+    width: 400px;
+    height: 450px;
+    background: #2E2E2E;
+    position: fixed;
+    left: 42%;
+    border-radius: 25px;
+    margin-top: 15%;
+}
+
+.signout {
+    float: left;
+    display: block;
+    background-color: #2E2E2E;
+    text-align: center;
+    color: #89CFF0;
+    padding: 2px 30px;
+    font-family: "OpenSans";
+    position: relative;
+    left: 5%;
+    bottom: 96%;
+    font-size: 100%;
+    border-style: solid;
+    border-color: #2E2E2E;
+    z-index: 10000;
+    position: fixed;
+}
+
+.physicsBody {
+    width: 400px;
+    height: 400px;
+    background: #2E2E2E;
+    position: fixed;
+    left: 7.5%;
+    border-radius: 25px;
+    margin-top: 5%;
+}
+
+.physics button {
+    text-decoration: none;
+    color: #89CFF0;
+    font-family: "OpenSans";
+    display: block;
+    z-index: 100;
+    margin-top: 50%;
+
+}
+
+.physics img {
+
 }
 
 
@@ -51,9 +126,9 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
     height: 75px;
     right: 3px;
+    z-index: 1;
 }
 
 .navbar a {
@@ -69,19 +144,6 @@ p {
     top: 10px;
 }
 
-.navbar button {
-    float: left;
-    display: block;
-    color: #89CFF0;
-    text-align: center;
-    padding: 2px 30px;
-    text-decoration: none;
-    font-family: "OpenSans";
-    position: relative;
-    left: 50px;
-    top: 10px;
-    outline: none;
-}
 
 header {
     font-family: "Proxima";
@@ -149,10 +211,11 @@ p {
     width: 50px;
     margin-left: auto;
     margin-right: auto;
-    left: 56%;
+    left: 54%;
     font-size: 100%;
     display: flex;
     bottom: 2%;
+    border-style: solid;
   }
 
   img {
