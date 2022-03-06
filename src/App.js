@@ -123,7 +123,7 @@ function ChatMessage(props) {
     <div class="slide-up-fade-in">
     <div className={`message ${messageClass}`}>
       <img src = {photoURL} />
-      <p class="bubble2">{text}</p>
+      <p>{text}</p>
     </div>
     </div>
       

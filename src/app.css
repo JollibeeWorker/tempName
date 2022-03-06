@@ -38,7 +38,9 @@ button {
     position: relative;
     width: 50px;
     margin-left: auto;
-    left: 47%;
+    margin-right: auto;
+    left: 46%;
+    font-size: 100%;
 }
 
 
@@ -88,34 +90,56 @@ header {
     -webkit-text-fill-color: transparent;
 }
 
-.bubble2 {
-    padding: 20px;
-    background: #2E2E2E;
-    position: relative;
-    width: fit-content;
-    margin-left: auto;
-    right: 30%;
-    top: 80px;
+p {
+    max-width: 500px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
     border-radius: 25px;
-    z-index: 50;
-    margin-bottom: 80px
-}
-
-.spacing {
-    padding: 100px;
-}
-
-img {
-    float: left;
-    left: 72%;
-    max-width: 50px;
-    max-height: 50px;
-    border-radius: 50%;
     position: relative;
-    margin-right: auto;
-    top: 85px;
-    bottom: 80px;
-}
+    color: white;
+    text-align: center;
+  }
+  
+  .message {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .sent {
+    flex-direction: row-reverse;
+    position: relative;
+    max-width: 70%;
+  }
+
+  .received {
+    flex-direction: row;
+    position: relative;
+    left: 30%;
+  }
+  
+  .sent p {
+    color: black;
+    background: #89CFF0;
+    align-self: flex-end;
+  }
+
+
+  .received p {
+    background: #2E2E2E;
+    color: white;
+    position: relative;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 2px 5px;
+    position: relative;
+    
+  }
 
 .slide-up-fade-in{
     animation: slide-up-fade-in ease 1s;
