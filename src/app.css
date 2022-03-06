@@ -25,22 +25,16 @@ input {
     border-radius: 25px;
     background: #2E2E2E;
     color: white;
-    position: relative;
+    position: fixed;
     width: 200px;
     margin-left: auto;
     left: 45%;
+    z-index: 1000000;
+    bottom: 2%;
 }
 
 button {
-    padding: 15px;
-    border-radius: 25px;
-    background: #2E2E2E;
-    position: relative;
-    width: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 46%;
-    font-size: 100%;
+    
 }
 
 
@@ -73,6 +67,20 @@ p {
     position: relative;
     left: 50px;
     top: 10px;
+}
+
+.navbar button {
+    float: left;
+    display: block;
+    color: #89CFF0;
+    text-align: center;
+    padding: 2px 30px;
+    text-decoration: none;
+    font-family: "OpenSans";
+    position: relative;
+    left: 50px;
+    top: 10px;
+    outline: none;
 }
 
 header {
@@ -111,6 +119,7 @@ p {
     flex-direction: row-reverse;
     position: relative;
     max-width: 70%;
+    max-height: 50%;
   }
 
   .received {
@@ -130,6 +139,20 @@ p {
     background: #2E2E2E;
     color: white;
     position: relative;
+  }
+
+  .sendbutton button {
+    padding: 15px;
+    border-radius: 25px;
+    background: #2E2E2E;
+    position: fixed;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 56%;
+    font-size: 100%;
+    display: flex;
+    bottom: 2%;
   }
 
   img {

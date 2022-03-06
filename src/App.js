@@ -38,10 +38,6 @@ function App() {
   );
 }
 
-function top() {
-
-}
-
 function SignIn() {
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -95,8 +91,9 @@ function ChatRoom() {
     <header>CAMPUSconnect</header>
       <div class="navbar">
         
-        <a href="/app">Chatroom</a>
-        <a href="twitter.com">User Settings</a>
+        <a href="/app">User</a>
+        <button onClick = {() => auth.signOut()}>Sign Out</button>
+        
       </div>
       <div>
 
@@ -109,7 +106,9 @@ function ChatRoom() {
 
       <form onSubmit = {sendMessage}>
         <input value = {formValue} onChange = {(e) => setFormValue(e.target.value)}/>
+        <div class="sendbutton">
         <button type = 'submit'>👌</button>
+        </div>
       </form>
       </body>
     </>
